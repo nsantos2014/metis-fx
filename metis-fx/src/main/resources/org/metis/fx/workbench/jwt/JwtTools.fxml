@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.fxmisc.richtext.CodeArea?>
+
+<AnchorPane prefHeight="268.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.metis.fx.workbench.jwt.JwtTools">
+   <children>
+      <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="189.0" text="Encoded">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <CodeArea prefHeight="114.0" prefWidth="257.0" VBox.vgrow="ALWAYS" fx:id="encodedTokenEditor" wrapText="true"/>
+               </children>
+            </VBox>
+            <VBox prefHeight="268.0" prefWidth="356.0">
+               <children>
+                  <Label prefHeight="34.0" prefWidth="189.0" text="Decoded">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TitledPane animated="false" prefHeight="87.0" prefWidth="315.0" text="Header">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="200.0">
+                           <children>
+                              <CodeArea prefHeight="114.0" prefWidth="257.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" fx:id="tokenHeaderEditor"/>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+                  <TitledPane animated="false" layoutX="10.0" layoutY="45.0" prefWidth="315.0" text="Payload" VBox.vgrow="ALWAYS">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="200.0">
+                           <children>
+                              <CodeArea prefHeight="114.0" prefWidth="257.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"  fx:id="tokenPayloadEditor"/>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import org.fxmisc.flowless.VirtualizedScrollPane?>
+<?import org.fxmisc.richtext.CodeArea?>
+
+<AnchorPane prefHeight="268.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.metis.fx.workbench.json.JsonEditor">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Label prefHeight="56.0" prefWidth="189.0" text="This is the Json Editor" BorderPane.alignment="CENTER" />
+         </bottom>
+         <top>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button mnemonicParsing="false" onAction="#formatText" text="Format" />
+                <ToggleButton fx:id="btnToggleTextWrap" mnemonicParsing="false" text="Wrap Text" />
+                  <ComboBox fx:id="cmbPages" editable="false" prefWidth="150.0" promptText="chunkName" />
+                  <Button mnemonicParsing="false" onAction="#newPage" text="+" />
+              </items>
+               <opaqueInsets>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </ToolBar>
+         </top>
+         <center>
+            <VirtualizedScrollPane>
+               <content>
+                  <CodeArea fx:id="editorArea" />
+               </content>
+            </VirtualizedScrollPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

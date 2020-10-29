@@ -1,0 +1,82 @@
+
+
+.cm-jwt-header {
+	-fx-fill: #fb015b;
+}
+
+.cm-jwt-dot {
+	-fx-fill: #000;
+}
+
+.cm-jwt-payload {
+	-fx-fill: #d63aff;
+}
+
+.cm-jwt-signature {
+	-fx-fill: #00b9f1;
+}
+
+.keyword {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: firebrick;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: darkgreen;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: blue;
+}
+
+.comment {
+	-fx-fill: cadetblue;
+}
+
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}
+
+/* Common to JSON and XML */
+
+.xml_bracket,
+.json_curly {
+    -fx-fill: coral !important;
+}
+
+.xml_tag,
+.json_property {
+    -fx-fill: orange !important;
+    -fx-font-weight: bold;
+}
+
+.xml_attribute_value,
+.json_value {
+    -fx-fill: cornflowerblue !important;
+}
+
+/* JSON-specific */
+
+.json_array {
+    -fx-fill: limegreen !important;
+}
+
+.json_bool {
+    -fx-fill: crimson !important;
+    -fx-font-weight: bold;
+}
+
+.json_number {
+    -fx-fill: greenyellow !important;
+    -fx-font-weight: bold;
+}

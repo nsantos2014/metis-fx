@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<HBox styleClass="metis-workshop" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.metis.fx.workshop.WorkshopController">
+   <children>
+      <VBox prefHeight="360.0" prefWidth="156.0" spacing="5.0" styleClass="metis-workshop-menu">
+         <children>
+            <AnchorPane prefWidth="200.0" VBox.vgrow="NEVER">
+               <children>
+                  <Group layoutX="67.0" layoutY="12.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" layoutY="8.0" radius="14.0" stroke="#0000004e" strokeType="INSIDE">
+                           <effect>
+                              <SepiaTone level="0.4">
+                                 <input>
+                                    <Blend />
+                                 </input>
+                              </SepiaTone>
+                           </effect>
+                        </Circle>
+                        <Label layoutY="-13.0" text="Metis" textFill="#bfa9a9">
+                           <font>
+                              <Font name="Segoe Print" size="24.0" />
+                           </font>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Group>
+                  <FontAwesomeIconView fill="WHITE" glyphName="NAVICON" layoutX="170.0" layoutY="22.0" size="24" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+               </children>
+            </AnchorPane>
+            <JFXButton graphicTextGap="8.0" layoutX="10.0" layoutY="57.0" onAction="#openDashboard" prefHeight="32.0" text="Dashboard" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="DASHBOARD" size="24" />
+               </graphic>
+            </JFXButton>
+            <JFXButton graphicTextGap="8.0" onAction="#openEncryptionTools" prefHeight="32.0" text="Cipher Tools" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LOCK" size="24" />
+               </graphic>
+            </JFXButton>
+            <JFXButton graphicTextGap="8.0" layoutX="10.0" layoutY="57.0" onAction="#openJwtTools" prefHeight="32.0" text="JWT Tools" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="UNIVERSAL_ACCESS" size="24" />
+               </graphic>
+            </JFXButton>
+            <JFXButton graphicTextGap="8.0" layoutX="10.0" layoutY="53.0" onAction="#openJsonEditor" prefHeight="32.0" text="JSON Editor" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="FILE_CODE_ALT" size="24" />
+               </graphic>
+            </JFXButton>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <JFXButton layoutX="10.0" layoutY="131.0" onAction="#closeApp" prefHeight="32.0" text="Exit" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" size="24" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <BorderPane fx:id="workarea" prefHeight="700.0" prefWidth="800.0" />
+   </children>
+</HBox>
