@@ -10,7 +10,7 @@
 }
 
 .metis-workshop-menu .jfx-button {
-     -jfx-button-type: flat;
+     -jfx-button-type: FLAT;
      -fx-background-color : #1f1f33;
      -fx-text-fill: white;
 }
